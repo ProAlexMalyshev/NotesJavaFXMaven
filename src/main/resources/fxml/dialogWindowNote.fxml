@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.malishev.notes.controllers.DialogController">
+    <children>
+        <FlowPane prefWidth="400.0">
+            <children>
+                <Label fx:id="labelDate" focusTraversable="true" text="пн. 25.02.2018, 23:23">
+                    <FlowPane.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </FlowPane.margin>
+                </Label>
+            </children>
+        </FlowPane>
+        <TextArea fx:id="textAreaNote" prefWidth="400.0" promptText="Введите текст до 100 символов" wrapText="true">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+        </TextArea>
+        <FlowPane alignment="CENTER_RIGHT" prefWidth="400.0">
+            <children>
+                <Button fx:id="btnSave" disable="true" focusTraversable="false" mnemonicParsing="false" onAction="#save" text="Сохранить" />
+                <Button fx:id="btnCancel" cancelButton="true" focusTraversable="false" mnemonicParsing="false" onAction="#close" text="Отмена">
+                    <FlowPane.margin>
+                        <Insets left="10.0" />
+                    </FlowPane.margin>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" />
+            </VBox.margin>
+        </FlowPane>
+    </children>
+</VBox>

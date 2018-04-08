@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.geometry.*?>
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.malishev.notes.controllers.MainController" onMouseClicked="#clickMouse">
+<children>
+    <AnchorPane prefWidth="200.0" >
+        <children>
+            <FlowPane AnchorPane.leftAnchor="0.0">
+                <children>
+                    <Button fx:id="btnDelete" disable="true" focusTraversable="false"  mnemonicParsing="false" onAction="#clickButton" text="Удалить">
+                        <FlowPane.margin>
+                            <Insets right="10.0" />
+                        </FlowPane.margin>
+                    </Button>
+                    <Button fx:id="btnEdit" disable="true" focusTraversable="false"  mnemonicParsing="false" onAction="#clickButton" text="Редактировать">
+                        <FlowPane.margin>
+                            <Insets />
+                        </FlowPane.margin>
+                    </Button>
+                </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_RIGHT" AnchorPane.rightAnchor="0.0">
+                <children>
+                    <Label fx:id="labelCreatNewNote" focusTraversable="true" text="Создать новую заметку">
+                        <FlowPane.margin>
+                            <Insets right="10.0" />
+                        </FlowPane.margin>
+                    </Label>
+                    <Button fx:id="btnCreate" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#clickButton" text="+" />
+                </children>
+            </FlowPane>
+        </children>
+        <VBox.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+        </VBox.margin>
+    </AnchorPane>
+    <AnchorPane VBox.vgrow="ALWAYS" >
+        <children>
+            <TableView fx:id="tableNotes"   pickOnBounds="false" styleClass="table-view2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <columns>
+                    <TableColumn fx:id="columnNotes" maxWidth="-1.0" minWidth="450.0" prefWidth="-1.0" styleClass="note" text="Мои заметки">
+                    </TableColumn>
+                    <TableColumn fx:id="columnNotesData" maxWidth="-1.0" minWidth="128.0" prefWidth="-1.0" resizable="false" styleClass="data" text="Дата">
+                    </TableColumn>
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+        </children>
+        <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </VBox.margin>
+    </AnchorPane>
+</children>
+</VBox>
